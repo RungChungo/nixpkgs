@@ -76,6 +76,7 @@ stdenv.mkDerivation rec {
   patches = [
     ./fix-bash-completion.patch
     ./add-hidden-menu-entries.patch
+    ./multi-try-crypt.patch
   ];
 
   postPatch = if kbdcompSupport then ''
