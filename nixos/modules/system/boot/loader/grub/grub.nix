@@ -761,7 +761,8 @@ in
         in pkgs.writeScript "install-grub.sh" (''
         #!${pkgs.runtimeShell}
         set -e
-        ${optionalString cfg.enableCryptodisk "export GRUB_ENABLE_CRYPTODISK=y"}
+        ${optionalString cfg.disk.enable "export GRUB_ENABLE_CRYPTODISK=y"}
+        ${optionalString cfg.cryptodisk.enable "export GRUB_CRYPTODISK_PASSPHRASE_TRIES=${cfg.cryptodisk.retries}"}
       '' + flip concatMapStrings cfg.mirroredBoots (args: ''
         ${perl}/bin/perl ${install-grub-pl} ${grubConfig args} $@
       '') + cfg.extraInstallCommands);
