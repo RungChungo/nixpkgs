@@ -667,11 +667,10 @@ in
       };
 
       cryptodisk = mkOption {
-          default = [];
           description = ''
             GRUB cryptodisk support
           '';
-          type = with types; listOf (submodule {
+          type = with types; (submodule {
             options = {
               enable = mkOption {
                 default = false;
