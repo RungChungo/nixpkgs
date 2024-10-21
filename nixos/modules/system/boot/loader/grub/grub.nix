@@ -666,14 +666,34 @@ in
         '';
       };
 
-      enableCryptodisk = mkOption {
-        default = false;
-        type = types.bool;
-        description = ''
-          Enable support for encrypted partitions. GRUB should automatically
-          unlock the correct encrypted partition and look for filesystems.
-        '';
-      };
+      enableCryptodisk = lib.warn "The ‘enableCryptodiks’ is deprecated. Please use 'cryptodisk.enable instead’ instead." cryptodisk.enable;
+      
+      cryptodisk = mkOption {
+          default = [];
+          description = ''
+            GRUB cryptodisk support
+          '';
+          type = with types; listOf (submodule {
+            options = {
+              enable = mkOption {
+                default = false;
+                type = types.bool;
+                description = ''
+                  Enable support for encrypted partitions. GRUB should automatically
+                  unlock the correct encrypted partition and look for filesystems.
+                '';
+                };
+                retries = {
+                  default = 1;
+                  type = types.int;
+                  description = ''
+                    Number of times to allow key entries before dropping to rescue shell.
+                  '';
+                };
+              };
+          });
+        }
+      
 
       forceInstall = mkOption {
         default = false;
