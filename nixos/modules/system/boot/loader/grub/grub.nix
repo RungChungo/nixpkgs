@@ -666,8 +666,6 @@ in
         '';
       };
 
-      #enableCryptodisk = lib.warn "The ‘enableCryptodiks’ is deprecated. Please use 'cryptodisk.enable instead’ instead." cryptodisk.enable;
-      
       cryptodisk = mkOption {
           default = [];
           description = ''
@@ -694,7 +692,7 @@ in
           });
         };
 
-      enableCryptodisk = lib.warn "The ‘enableCryptodiks’ is deprecated. Please use 'cryptodisk.enable instead’ instead." grub.cryptodisk.enable;
+      enableCryptodisk = lib.warn "The ‘enableCryptodiks’ is deprecated. Please use 'cryptodisk.enable instead’ instead." cryptodisk.enable;
 
       forceInstall = mkOption {
         default = false;
