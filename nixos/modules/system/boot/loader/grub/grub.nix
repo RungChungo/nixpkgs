@@ -667,6 +667,7 @@ in
       };
 
       cryptodisk = mkOption {
+          default = {enable = true; retries=1;};
           description = ''
             GRUB cryptodisk support
           '';
