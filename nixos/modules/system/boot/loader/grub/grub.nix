@@ -692,7 +692,7 @@ in
                 };
               };
           });
-        }
+        };
       
 
       forceInstall = mkOption {
