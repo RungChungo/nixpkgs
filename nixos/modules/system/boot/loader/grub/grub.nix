@@ -693,7 +693,8 @@ in
               };
           });
         };
-      
+
+      enableCryptodisk = lib.warn "The ‘enableCryptodiks’ is deprecated. Please use 'cryptodisk.enable instead’ instead." cryptodisk.enable;
 
       forceInstall = mkOption {
         default = false;
