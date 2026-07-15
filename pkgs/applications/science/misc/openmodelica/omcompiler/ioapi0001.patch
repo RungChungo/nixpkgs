@@ -1,0 +1,33 @@
+From b0b906d11baaaa6a171c1d786e9e305cc5aceeb3 Mon Sep 17 00:00:00 2001
+From: RungChungo <155569880+RungChungo@users.noreply.github.com>
+Date: Sun, 10 May 2026 04:32:30 -0400
+Subject: [PATCH] Update ioapi.c
+
+Bootstrap build fails on this. Seems to be a typo
+---
+ FMIL/ThirdParty/Minizip/minizip/ioapi.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/FMIL/ThirdParty/Minizip/minizip/ioapi.c b/FMIL/ThirdParty/Minizip/minizip/ioapi.c
+index 7f5c191b2..d7764ba38 100644
+--- a/FMIL/ThirdParty/Minizip/minizip/ioapi.c
++++ b/FMIL/ThirdParty/Minizip/minizip/ioapi.c
+@@ -221,8 +221,7 @@ static int ZCALLBACK ferror_file_func (voidpf opaque, voidpf stream)
+     return ret;
+ }
+ 
+-void fill_fopen_filefunc (pzlib_filefunc_def)
+-  zlib_filefunc_def* pzlib_filefunc_def;
++void fill_fopen_filefunc (zlib_filefunc_def* pzlib_filefunc_def)
+ {
+     pzlib_filefunc_def->zopen_file = fopen_file_func;
+     pzlib_filefunc_def->zread_file = fread_file_func;
+@@ -234,7 +233,7 @@ void fill_fopen_filefunc (pzlib_filefunc_def)
+     pzlib_filefunc_def->opaque = NULL;
+ }
+ 
+-void fill_fopen64_filefunc (zlib_filefunc64_def*  pzlib_filefunc_def)
++void fill_fopen64_filefunc (zlib_filefunc64_def*  pzlib_filefunc_def)
+ {
+     pzlib_filefunc_def->zopen64_file = fopen64_file_func;
+     pzlib_filefunc_def->zread_file = fread_file_func;

@@ -1,0 +1,82 @@
+From dfe14f389fa687384019c26dcf6f3eb41e9afd9a Mon Sep 17 00:00:00 2001
+From: RungChungo <155569880+RungChungo@users.noreply.github.com>
+Date: Sun, 10 May 2026 05:38:25 -0400
+Subject: [PATCH] Update miniunz.c
+
+C formatting issues
+---
+ FMIL/ThirdParty/Minizip/minizip/miniunz.c | 26 ++++++-----------------
+ 1 file changed, 6 insertions(+), 20 deletions(-)
+
+diff --git a/FMIL/ThirdParty/Minizip/minizip/miniunz.c b/FMIL/ThirdParty/Minizip/minizip/miniunz.c
+index 80d0fe585..c111e6aab 100644
+--- a/FMIL/ThirdParty/Minizip/minizip/miniunz.c
++++ b/FMIL/ThirdParty/Minizip/minizip/miniunz.c
+@@ -93,10 +93,7 @@ static int minizip_printf( const char * format, ... )
+     filename : the filename of the file where date/time must be modified
+     dosdate : the new date at the MSDos format (4 bytes)
+     tmu_date : the SAME new date at the tm_unz format */
+-void change_file_date(filename,dosdate,tmu_date)
+-    const char *filename;
+-    uLong dosdate;
+-    tm_unz tmu_date;
++void change_file_date(const char *filename, uLong dosdate, tm_unz tmu_date)
+ {
+ #ifdef _WIN32
+   HANDLE hFile;
+@@ -134,8 +131,7 @@ void change_file_date(filename,dosdate,tmu_date)
+ /* mymkdir and change_file_date are not 100 % portable
+    As I don't know well Unix, I wait feedback for the unix portion */
+ 
+-int mymkdir(dirname)
+-    const char* dirname;
++int mymkdir(const char* dirname)
+ {
+     int ret=0;
+ #ifdef _WIN32
+@@ -150,8 +146,7 @@ int mymkdir(dirname)
+     return ret;
+ }
+ 
+-int makedir (newdir)
+-    char *newdir;
++int makedir (char *newdir)
+ {
+   char *buffer ;
+   char *p;
+@@ -248,8 +243,7 @@ void Display64BitsSize(ZPOS64_T n, int size_char)
+   minizip_printf("%s",&number[pos_string]);
+ }
+ 
+-int do_list(uf)
+-    unzFile uf;
++int do_list(unzFile uf)
+ {
+     uLong i;
+     unz_global_info64 gi;
+@@ -326,11 +320,7 @@ int do_list(uf)
+ }
+ 
+ 
+-int do_extract_currentfile(uf,popt_extract_without_path,popt_overwrite,password)
+-    unzFile uf;
+-    const int* popt_extract_without_path;
+-    int* popt_overwrite;
+-    const char* password;
++int do_extract_currentfile(unzFile uf, const int* popt_extract_without_path, int* popt_overwrite, const char* password)
+ {
+     char filename_inzip[256];
+     char* filename_withoutpath;
+@@ -489,11 +479,7 @@ int do_extract_currentfile(uf,popt_extract_without_path,popt_overwrite,password)
+ }
+ 
+ 
+-int do_extract(uf,opt_extract_without_path,opt_overwrite,password)
+-    unzFile uf;
+-    int opt_extract_without_path;
+-    int opt_overwrite;
+-    const char* password;
++int do_extract(unzFile uf int opt_extract_without_path int opt_overwrite const char* password)
+ {
+     uLong i;
+     unz_global_info64 gi;

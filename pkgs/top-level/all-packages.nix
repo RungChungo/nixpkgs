@@ -2825,6 +2825,8 @@ with pkgs;
 
   mpi = openmpi; # this attribute should used to build MPI applications
 
+  openmodelica = recurseIntoAttrs (callPackage ../applications/science/misc/openmodelica { });
+
   quota = if stdenv.hostPlatform.isLinux then linuxquota else unixtools.quota;
 
   rainbowstream = with python3.pkgs; toPythonApplication rainbowstream;
