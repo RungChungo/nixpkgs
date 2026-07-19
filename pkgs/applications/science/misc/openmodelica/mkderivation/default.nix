@@ -77,7 +77,7 @@ let
   # Our own configurePhase that accounts for omautoconf
   configurePhase = ''
     runHook preConfigure
-    export configureFlags="''${configureFlags} --with-ombuilddir=$PWD/build --prefix=$prefix"
+    export configureFlags="''${configureFlags} --with-ombuilddir=$PWD/build --prefix=$prefix --with-qt6"
     ./configure --no-recursion $configureFlags
     ${lib.optionalString omautoconf "(cd ${omdir}; ./configure $configureFlags)"}
     runHook postConfigure
@@ -118,7 +118,7 @@ stdenv.mkDerivation (
       repo = "openmodelica";
       fetchSubmodules = true;
       tag = version;
-      hash = "sha256-3nPvwDtgemLgWs7IrPTYLniX7tXrRdGM01bVDI4dtL0=";
+      hash = "sha256-fq7+9iBAz7JrvXTMaj1pxPal5haLgka62uocLsBhwnE=";
     };
     version = "v1.27.0";
 

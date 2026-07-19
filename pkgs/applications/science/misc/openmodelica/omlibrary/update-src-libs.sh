@@ -13,9 +13,9 @@ with import <nixpkgs> {};
 fetchFromGitHub {
       owner = "openmodelica";
       repo = "openmodelica";
-      tag = "v1.26.7";
+      tag = "v1.27.0";
       hash = "sha256-RPTd95MKx8fj6OluKouwuoIz85a8l/VUmXT02BRSl+o=";
-    } 
+    }
 EOF
     nix-build check.nix
     cat result/libraries/Makefile.libs

@@ -16,7 +16,7 @@ symlinkJoin {
     omplot
     omparser
     omedit
-    omlibrary
+    #omlibrary
     omshell
   ];
 
@@ -35,8 +35,7 @@ symlinkJoin {
           blas
           lapack
         ]
-      }" \
-      --set-default OPENMODELICALIBRARY "${openmodelica.omlibrary}/lib/omlibrary"
+      }"
   '';
 
   meta = {

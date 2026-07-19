@@ -22,6 +22,8 @@
   qt6Packages,
   openscenegraph,
   cproto,
+  llvmPackages,
+  colpack,
 }:
 let
   isCross = stdenv.buildPlatform != stdenv.hostPlatform;
@@ -42,6 +44,8 @@ mkOpenModelicaDerivation (
       qt6Packages.qttools
       boost
       cproto
+      colpack
+      llvmPackages.openmp
       jre8
       gfortran
       lapack
@@ -60,6 +64,7 @@ mkOpenModelicaDerivation (
       curl
       readline
       expat
+      colpack
       libffi
       binutils
     ];
@@ -74,8 +79,10 @@ mkOpenModelicaDerivation (
           $(find ./OMCompiler -name 'Makefile*')
       sed -i "s|LIBRARY DESTINATION ''\${CMAKE_INSTALL_LIBDIR}|LIBRARY DESTINATION lib2|g" ./OMCompiler/3rdParty/libzmq/CMakeLists.txt
       sed -i "s/# set(CMAKE_C_STANDARD 90)/  set(CMAKE_C_STANDARD 17)/" ./CMakeLists.txt
-      sed -i "36c\
+      sed -i "5,6d" ./OMCompiler/Parser/*.g
+      sed -i "37c\
       CXXFLAGS += ''\$\(CPPFLAGS\) ''\$\(INCLUDE_NONFMI\) -I." ./OMCompiler/SimulationRuntime/c/Makefile.common
+      sed -i -e 's/{"codegen_xml",\(.*\), ""/{"codegen_xml", "backend",\1/p' ./OMCompiler/Compiler/.cmake/mm_check_interface.in.mos ./OMCompiler/Compiler/boot/CompileFile.mos
     '';
 
     env.CFLAGS = toString [

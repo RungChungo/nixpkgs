@@ -3,6 +3,7 @@
   qtbase,
   qttools,
   qmake,
+  qt5compat,
   wrapQtAppsHook,
   openmodelica,
   mkOpenModelicaDerivation,
@@ -18,6 +19,7 @@ mkOpenModelicaDerivation {
     qtbase
     qttools
     qmake
+    qt5compat
     wrapQtAppsHook
   ];
 
@@ -29,6 +31,7 @@ mkOpenModelicaDerivation {
 
   dontUseQmakeConfigure = true;
   QMAKESPEC = "linux-clang";
+
 
   meta = {
     description = "Plotting tool for OpenModelica-generated results files";
