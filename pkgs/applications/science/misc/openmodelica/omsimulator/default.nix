@@ -37,7 +37,13 @@ mkOpenModelicaDerivation {
     "-Wno-error=implicit-function-declaration"
     "-std=gnu17"
   ];
-
+  postPatch = ''
+    mkdir -p $PWD/build/include/omc
+    mkdir -p $PWD/build/bin
+    mkdir -p $PWD/build/share
+    sed -i '65c \\techo Yeet' ./Makefile.in
+    sed -i '46i \\tmkdir -p @OMBUILDDIR@\/lib\/@host_short@\/omc\/' ./Makefile.in
+  '';
   meta = {
     description = "OpenModelica FMI & SSP-based co-simulation environment";
     homepage = "https://openmodelica.org";
