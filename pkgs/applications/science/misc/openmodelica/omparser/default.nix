@@ -1,6 +1,7 @@
 {
   lib,
   pkg-config,
+  cmake,
   jre8,
   libuuid,
   openmodelica,
@@ -12,7 +13,11 @@ mkOpenModelicaDerivation {
   omdir = "OMParser";
   omdeps = [ openmodelica.omcompiler ];
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [ pkg-config cmake ];
+
+  postInstall = ''
+    cp ./OMParser/*.h $out/bin
+  '';
 
   buildInputs = [
     jre8
