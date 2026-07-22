@@ -155,12 +155,6 @@ stdenv.mkDerivation {
     ) ./Prefer-DOTNET_ROOT-over-directory-traversal-when-fin.patch
     ++ lib.optionals (lib.versionAtLeast version "11") [
       ./Prefer-DOTNET_ROOT-over-directory-traversal-when-fin.2.patch
-      (fetchpatch2 {
-        url = "https://github.com/dotnet/roslyn/commit/0efb81ea44ddf262eb50d71c9d0f1728e2ad7ac6.patch";
-        hash = "sha256-ZZZGMtO1cuvywhPpmwF8PFAGnuidD3yht2TVGCMjVZ0=";
-        stripLen = 1;
-        extraPrefix = "src/roslyn/";
-      })
     ]
     ++ lib.optional (lib.versionAtLeast version "11" && isDarwin) ./fix-cmake-darwin.patch;
 
@@ -551,8 +545,5 @@ stdenv.mkDerivation {
       "aarch64-linux"
       "aarch64-darwin"
     ];
-    # build deadlocks intermittently on rosetta
-    # https://github.com/dotnet/runtime/issues/111628
-    broken = stdenv.hostPlatform.system == "x86_64-darwin";
   };
 }

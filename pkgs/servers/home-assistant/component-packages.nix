@@ -2465,8 +2465,9 @@
     "greencell" =
       ps: with ps; [
         aiohasupervisor
+        greencell-client
         paho-mqtt
-      ]; # missing inputs: greencell_client
+      ];
     "greeneye_monitor" =
       ps: with ps; [
         greeneye-monitor
@@ -2555,7 +2556,8 @@
       ];
     "helty" =
       ps: with ps; [
-      ]; # missing inputs: pyhelty
+        pyhelty
+      ];
     "heos" =
       ps: with ps; [
         pyheos
@@ -3004,7 +3006,8 @@
       ];
     "imou" =
       ps: with ps; [
-      ]; # missing inputs: pyimouapi
+        pyimouapi
+      ];
     "improv_ble" =
       ps: with ps; [
         aioesphomeapi
@@ -3243,7 +3246,8 @@
       ];
     "itach" =
       ps: with ps; [
-      ]; # missing inputs: pyitachip2ir2
+        pyitachip2ir2
+      ];
     "itunes" =
       ps: with ps; [
       ];
@@ -3982,7 +3986,8 @@
       ];
     "melcloud_home" =
       ps: with ps; [
-      ]; # missing inputs: aiomelcloudhome
+        aiomelcloudhome
+      ];
     "melissa" =
       ps: with ps; [
         py-melissa-climate
@@ -6441,7 +6446,8 @@
       ];
     "swisscom" =
       ps: with ps; [
-      ]; # missing inputs: python-swisscom-internet-box
+        python-swisscom-internet-box
+      ];
     "switch" =
       ps: with ps; [
       ];
@@ -7366,7 +7372,8 @@
       ];
     "wattwaechter" =
       ps: with ps; [
-      ]; # missing inputs: aio-wattwaechter
+        aio-wattwaechter
+      ];
     "waze_travel_time" =
       ps: with ps; [
         pywaze
@@ -8149,6 +8156,7 @@
     "graphite"
     "gree"
     "green_planet_energy"
+    "greencell"
     "greeneye_monitor"
     "group"
     "growatt_server"
@@ -8164,6 +8172,7 @@
     "hdfury"
     "hdmi_cec"
     "hegel"
+    "helty"
     "heos"
     "here_travel_time"
     "hikvision"
@@ -8226,6 +8235,7 @@
     "imeon_inverter"
     "imgw_pib"
     "immich"
+    "imou"
     "improv_ble"
     "incomfort"
     "indevolt"
@@ -8261,6 +8271,7 @@
     "iss"
     "ista_ecotrend"
     "isy994"
+    "itach"
     "ituran"
     "izone"
     "jellyfin"
@@ -8355,6 +8366,7 @@
     "media_player"
     "media_source"
     "melcloud"
+    "melcloud_home"
     "melissa"
     "melnor"
     "meraki"
@@ -8718,6 +8730,7 @@
     "sunweg"
     "surepetcare"
     "swiss_public_transport"
+    "swisscom"
     "switch"
     "switch_as_x"
     "switchbee"
@@ -8860,6 +8873,7 @@
     "watergate"
     "watts"
     "watttime"
+    "wattwaechter"
     "waze_travel_time"
     "weather"
     "weatherflow"
