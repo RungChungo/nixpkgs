@@ -8,7 +8,6 @@
   jre8,
   blas,
   lapack,
-  cmake,
   curl,
   readline,
   expat,
