@@ -24,6 +24,7 @@ locales.section.md
 etc-files.section.md
 nginx.section.md
 nrfutil.section.md
+openfoam-com.section.md
 opengl.section.md
 packer.section.md
 shell-helpers.section.md

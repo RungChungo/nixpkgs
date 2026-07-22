@@ -11109,4 +11109,7 @@ with pkgs;
   };
 
   feishin-web = feishin.override { webVersion = true; };
+
+  openfoam-com_2412 = callPackage ./../by-name/op/openfoam-com/2412.nix { };
+  openfoam-com_2406 = callPackage ./../by-name/op/openfoam-com/2406.nix { };
 }

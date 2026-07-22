@@ -230,6 +230,9 @@
   "modules-generic-meta-maintainers": [
     "index.html#modules-generic-meta-maintainers"
   ],
+  "how-to-compile-and-use-openfoam-com-extensions": [
+    "index.html#how-to-compile-and-use-openfoam-com-extensions"
+  ],
   "neovim": [
     "index.html#neovim"
   ],
@@ -614,6 +617,9 @@
   ],
   "sec-nrfutil": [
     "index.html#sec-nrfutil"
+  ],
+  "sec-openfoam-com": [
+    "index.html#sec-openfoam-com"
   ],
   "sec-overlays-install": [
     "index.html#sec-overlays-install"
