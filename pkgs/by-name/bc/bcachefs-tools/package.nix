@@ -31,18 +31,18 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bcachefs-tools";
-  version = "1.38.8";
+  version = "1.39.1";
 
   src = fetchFromGitHub {
     owner = "koverstreet";
     repo = "bcachefs-tools";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-9sDE7ua3WMCfV9ZbwQdAbpatv2IhvcwHzzPr+/l2au0=";
+    hash = "sha256-KJBzVbK5DL+ZK27Oyyn8vCWRQUHrIAelrex1oX+fWq4=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs) src;
-    hash = "sha256-F1+FeAlYSqOxeWJI8vHShpXrOZqYXjNGvty/s6f6u8w=";
+    hash = "sha256-Yb2DaFLuhAkwYED+s9SRKsjxluWoES4RSvKPKfd/kyE=";
   };
 
   postPatch = ''
@@ -103,6 +103,12 @@ stdenv.mkDerivation (finalAttrs: {
     "CARGO_TARGET_${stdenv.hostPlatform.rust.cargoEnvVarTarget}_LINKER" = "${stdenv.cc.targetPrefix}cc";
   };
 
+  # Workaround for RISCV cross-compilation issue
+  # https://github.com/koverstreet/bcachefs-tools/issues/850
+  preBuild = lib.optionalString stdenv.hostPlatform.isRiscV ''
+    export BINDGEN_EXTRA_CLANG_ARGS="$BINDGEN_EXTRA_CLANG_ARGS --target=riscv64-unknown-linux-gnu -march=rv64gc"
+  '';
+
   # FIXME: Try enabling this once the default linux kernel is at least 6.7
   doCheck = false; # needs bcachefs module loaded on builder
 
@@ -153,6 +159,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     platforms = lib.platforms.linux;
     mainProgram = "bcachefs";
-    broken = stdenv.hostPlatform.isi686; # error: stack smashing detected
   };
 })

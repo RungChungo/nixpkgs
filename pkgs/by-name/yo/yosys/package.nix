@@ -16,6 +16,7 @@
   libffi,
   readline,
   tcl,
+  sv-lang,
   zlib,
 
   # tests
@@ -78,13 +79,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "yosys";
-  version = "0.67";
+  version = "0.68";
 
   src = fetchFromGitHub {
     owner = "YosysHQ";
     repo = "yosys";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-sJaekoBnLEn7j56duQOFMkT4fELHNgkYCbcY6E8hgyA=";
+    hash = "sha256-cf3L3Il717ReAcPTPNHZLwldDeCwuPqHYoxeQusBOOg=";
     fetchSubmodules = true;
   };
 
@@ -112,6 +113,7 @@ stdenv.mkDerivation (finalAttrs: {
     libffi
     readline
     tcl
+    sv-lang
     zlib
   ]
   ++ lib.optionals enablePython [
@@ -121,8 +123,6 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeFlags = [
     (lib.cmakeBool "YOSYS_SKIP_ABC_SUBMODULE_CHECK" true)
     (lib.cmakeFeature "YOSYS_CHECKOUT_INFO" "v${finalAttrs.version}")
-    # slang is not packaged yet.
-    (lib.cmakeBool "YOSYS_WITHOUT_SLANG" true)
     (lib.cmakeBool "YOSYS_WITH_PYTHON" enablePython)
   ]
   ++ lib.optionals enablePython [

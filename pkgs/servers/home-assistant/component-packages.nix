@@ -2,7 +2,7 @@
 # Do not edit!
 
 {
-  version = "2026.7.2";
+  version = "2026.8.1";
   components = {
     "3_day_blinds" =
       ps: with ps; [
@@ -22,6 +22,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -34,6 +35,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -147,6 +149,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -159,6 +162,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -376,6 +380,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -388,6 +393,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -528,6 +534,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -540,6 +547,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -554,7 +562,6 @@
     "aws" =
       ps: with ps; [
         aiobotocore
-        botocore
       ];
     "aws_s3" =
       ps: with ps; [
@@ -643,8 +650,7 @@
       ];
     "bitcoin" =
       ps: with ps; [
-        blockchain
-      ];
+      ]; # missing inputs: blockchain
     "bizkaibus" =
       ps: with ps; [
         bizkaibus
@@ -685,6 +691,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluemaestro-ble
         bluetooth-adapters
         bluetooth-auto-recovery
@@ -698,6 +705,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -733,6 +741,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -745,6 +754,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -759,6 +769,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -771,6 +782,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -860,6 +872,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -873,6 +886,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -928,6 +942,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -941,6 +956,7 @@
         mutagen
         pycasperglow
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -1006,6 +1022,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -1019,6 +1036,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -1450,6 +1468,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -1463,6 +1482,7 @@
         mutagen
         py-dormakaba-dkey
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -1533,6 +1553,10 @@
         dynalite-panel
         home-assistant-frontend
       ];
+    "dyson_infrared" =
+      ps: with ps; [
+        infrared-protocols
+      ];
     "eafm" =
       ps: with ps; [
         aioeafm
@@ -1591,7 +1615,9 @@
       ];
     "edl21" =
       ps: with ps; [
+        aiousbwatcher
         pysml
+        serialx
       ];
     "efergy" =
       ps: with ps; [
@@ -1763,6 +1789,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -1776,6 +1803,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -1833,6 +1861,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -1846,6 +1875,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -1997,6 +2027,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2010,6 +2041,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -2151,6 +2183,10 @@
       ps: with ps; [
         afsapi
       ];
+    "fuelprices_dk" =
+      ps: with ps; [
+        pybraendstofpriser
+      ];
     "fujitsu_anywair" =
       ps: with ps; [
       ];
@@ -2199,6 +2235,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2212,12 +2249,17 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
       ];
     "gate" =
       ps: with ps; [
+      ];
+    "gatus" =
+      ps: with ps; [
+        gatus-api
       ];
     "gaviota" =
       ps: with ps; [
@@ -2279,6 +2321,10 @@
     "geonetnz_volcano" =
       ps: with ps; [
         aio-geojson-geonetnz-volcano
+      ];
+    "geosphere_austria_warnings" =
+      ps: with ps; [
+        pygeosphere-warnings
       ];
     "ghost" =
       ps: with ps; [
@@ -2372,6 +2418,10 @@
         pymicro-vad
         pyspeex-noise
       ];
+    "google_health" =
+      ps: with ps; [
+        google-health-api
+      ];
     "google_mail" =
       ps: with ps; [
         google-api-python-client
@@ -2421,6 +2471,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2434,6 +2485,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -2499,6 +2551,9 @@
       ps: with ps; [
         hanna-cloud
       ];
+    "harbor" =
+      ps: with ps; [
+      ]; # missing inputs: harbor-python
     "hardkernel" =
       ps: with ps; [
         aiohasupervisor
@@ -2512,6 +2567,9 @@
       ps: with ps; [
         hkavr
       ];
+    "harman_luxury" =
+      ps: with ps; [
+      ]; # missing inputs: aioharmanluxury
     "harmony" =
       ps: with ps; [
         aioharmony
@@ -2702,6 +2760,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2715,6 +2774,7 @@
         mutagen
         pymicro-vad
         pyroute2
+        pysmlight
         pyspeex-noise
         python-otbr-api
         serialx
@@ -2787,6 +2847,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2800,6 +2861,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -2836,6 +2898,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2849,6 +2912,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -2896,6 +2960,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2909,6 +2974,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -2927,6 +2993,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -2940,6 +3007,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3018,6 +3086,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3031,6 +3100,7 @@
         mutagen
         py-improv-ble-client
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3071,6 +3141,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3084,6 +3155,7 @@
         inkbird-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3193,6 +3265,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3206,6 +3279,7 @@
         mutagen
         pymicro-vad
         pynecil
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3299,6 +3373,9 @@
     "kankun" =
       ps: with ps; [
       ];
+    "karakeep" =
+      ps: with ps; [
+      ]; # missing inputs: aiokarakeep
     "keba" =
       ps: with ps; [
         keba-kecontact
@@ -3322,6 +3399,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3335,6 +3413,7 @@
         kegtron-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3357,6 +3436,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3370,6 +3450,7 @@
         mutagen
         pymicro-vad
         pymicrobot
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3414,6 +3495,7 @@
         xknx
         xknxproject
       ]
+      ++ knx-telegram-store.optional-dependencies.postgres
       ++ knx-telegram-store.optional-dependencies.sqlite;
     "kodi" =
       ps: with ps; [
@@ -3447,6 +3529,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3460,6 +3543,7 @@
         mutagen
         pykulersky
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3489,6 +3573,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3502,6 +3587,7 @@
         mutagen
         pylamarzocco
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3550,6 +3636,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3563,6 +3650,7 @@
         ld2410-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3577,6 +3665,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3590,6 +3679,7 @@
         leaone-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -3604,6 +3694,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3617,9 +3708,14 @@
         led-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
+      ];
+    "led_infrared" =
+      ps: with ps; [
+        infrared-protocols
       ];
     "legrand" =
       ps: with ps; [
@@ -3726,6 +3822,16 @@
       ps: with ps; [
         pylitejet
       ];
+    "litellm" =
+      ps: with ps; [
+        ha-ffmpeg
+        hassil
+        home-assistant-intents
+        mutagen
+        openai
+        pymicro-vad
+        pyspeex-noise
+      ];
     "litterrobot" =
       ps: with ps; [
         pylitterbot
@@ -3734,7 +3840,20 @@
       ps: with ps; [
         livisi
       ];
+    "llama_cpp" =
+      ps: with ps; [
+        ha-ffmpeg
+        hassil
+        home-assistant-intents
+        mutagen
+        openai
+        pymicro-vad
+        pyspeex-noise
+      ];
     "llamalab_automate" =
+      ps: with ps; [
+      ];
+    "llm" =
       ps: with ps; [
       ];
     "local_calendar" =
@@ -3844,6 +3963,11 @@
       ps: with ps; [
         lw12
       ];
+    "lyngdorf" =
+      ps: with ps; [
+        async-upnp-client
+        ifaddr
+      ]; # missing inputs: lyngdorf
     "lyric" =
       ps: with ps; [
         aiolyric
@@ -3946,6 +4070,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -3959,6 +4084,7 @@
         medcom-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4002,6 +4128,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4015,6 +4142,7 @@
         melnor-bluetooth
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4066,6 +4194,10 @@
       ps: with ps; [
         pycsspeechtts
       ];
+    "midea" =
+      ps: with ps; [
+        midea-local
+      ];
     "miele" =
       ps: with ps; [
         pymiele
@@ -4113,6 +4245,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4126,6 +4259,7 @@
         moat-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4188,14 +4322,16 @@
       ];
     "monarch_money" =
       ps: with ps; [
-        typedmonarchmoney
+        monarchmoneycommunity
       ];
     "monessen" =
       ps: with ps; [
       ];
     "monoprice" =
       ps: with ps; [
+        aiousbwatcher
         pymonoprice
+        serialx
       ];
     "monzo" =
       ps: with ps; [
@@ -4214,6 +4350,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4227,6 +4364,7 @@
         mopeka-iot-ble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4249,6 +4387,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4262,6 +4401,7 @@
         motionblindsble
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4388,6 +4528,9 @@
     "neo" =
       ps: with ps; [
       ];
+    "neopool" =
+      ps: with ps; [
+      ]; # missing inputs: neopool-modbus
     "ness_alarm" =
       ps: with ps; [
         nessclient
@@ -4779,6 +4922,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4792,6 +4936,7 @@
         mutagen
         py-opendisplay
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -4870,6 +5015,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -4883,6 +5029,7 @@
         mutagen
         oralb-ble
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -5064,7 +5211,6 @@
       ];
     "permobil" =
       ps: with ps; [
-        mypermobil
       ];
     "persistent_notification" =
       ps: with ps; [
@@ -5220,6 +5366,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5232,6 +5379,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -5246,6 +5394,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5259,6 +5408,7 @@
         mutagen
         pymicro-vad
         pyprobeplus
+        pysmlight
         pyspeex-noise
         serialx
         zeroconf
@@ -5386,6 +5536,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5398,6 +5549,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         qingping-ble
         serialx
@@ -5521,6 +5673,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5533,6 +5686,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         rapt-ble
         serialx
@@ -5766,6 +5920,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5778,6 +5933,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         ruuvitag-ble
         serialx
@@ -5845,6 +6001,9 @@
     "scl" =
       ps: with ps; [
       ];
+    "scorpiontrack" =
+      ps: with ps; [
+      ]; # missing inputs: pyscorpiontrack
     "scrape" =
       ps: with ps; [
         beautifulsoup4
@@ -5894,6 +6053,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5906,6 +6066,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         sensirion-ble
         serialx
@@ -5930,6 +6091,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5942,6 +6104,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         sensorpro-ble
         serialx
@@ -5957,6 +6120,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -5969,6 +6133,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         sensorpush-ble
         serialx
@@ -6188,7 +6353,17 @@
       ];
     "smlight" =
       ps: with ps; [
+        aiousbwatcher
+        bleak
+        bleak-retry-connector
+        bleak-smlight
+        bluetooth-adapters
+        bluetooth-auto-recovery
+        bluetooth-data-tools
+        dbus-fast
+        habluetooth
         pysmlight
+        serialx
       ];
     "smtp" =
       ps: with ps; [
@@ -6218,6 +6393,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -6230,6 +6406,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pysnooz
         pyspeex-noise
         serialx
@@ -6468,6 +6645,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -6480,6 +6658,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         pyswitchbot
         serialx
@@ -6703,6 +6882,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -6715,6 +6895,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         thermobeacon-ble
@@ -6733,6 +6914,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -6745,6 +6927,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         thermopro-ble
@@ -6796,6 +6979,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -6808,6 +6992,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         tilt-ble
@@ -7088,6 +7273,8 @@
       ];
     "upb" =
       ps: with ps; [
+        aiousbwatcher
+        serialx
         upb-lib
       ];
     "upc_connect" =
@@ -7210,6 +7397,9 @@
       ps: with ps; [
         viaggiatreno-ha
       ];
+    "vibration" =
+      ps: with ps; [
+      ];
     "vicare" =
       ps: with ps; [
         pyvicare
@@ -7224,6 +7414,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -7236,6 +7427,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         victron-ble-ha-parser
@@ -7263,8 +7455,7 @@
       ];
     "vizio" =
       ps: with ps; [
-        pyvizio
-      ];
+      ]; # missing inputs: vizaio
     "vlc" =
       ps: with ps; [
         python-vlc
@@ -7302,9 +7493,6 @@
     "volvo" =
       ps: with ps; [
         volvocarsapi
-      ];
-    "volvooncall" =
-      ps: with ps; [
       ];
     "w800rf32" =
       ps: with ps; [
@@ -7556,6 +7744,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -7568,6 +7757,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         xiaomi-ble
@@ -7638,6 +7828,7 @@
         bleak
         bleak-esphome
         bleak-retry-connector
+        bleak-smlight
         bluetooth-adapters
         bluetooth-auto-recovery
         bluetooth-data-tools
@@ -7650,6 +7841,7 @@
         ifaddr
         mutagen
         pymicro-vad
+        pysmlight
         pyspeex-noise
         serialx
         yalexs-ble
@@ -8004,6 +8196,7 @@
     "duotecno"
     "dwd_weather_warnings"
     "dynalite"
+    "dyson_infrared"
     "eafm"
     "earn_e_p1"
     "easyenergy"
@@ -8104,6 +8297,7 @@
     "fronius"
     "frontend"
     "frontier_silicon"
+    "fuelprices_dk"
     "fujitsu_fglair"
     "fully_kiosk"
     "fumis"
@@ -8112,6 +8306,7 @@
     "garages_amsterdam"
     "gardena_bluetooth"
     "gate"
+    "gatus"
     "gdacs"
     "generic"
     "generic_hygrostat"
@@ -8125,6 +8320,7 @@
     "geofency"
     "geonetnz_quakes"
     "geonetnz_volcano"
+    "geosphere_austria_warnings"
     "ghost"
     "gios"
     "github"
@@ -8140,6 +8336,7 @@
     "google_cloud"
     "google_drive"
     "google_generative_ai_conversation"
+    "google_health"
     "google_mail"
     "google_photos"
     "google_pubsub"
@@ -8255,6 +8452,7 @@
     "intellifire"
     "intent"
     "intent_script"
+    "intesishome"
     "iometer"
     "ios"
     "iotawatt"
@@ -8308,6 +8506,7 @@
     "ld2410_ble"
     "leaone"
     "led_ble"
+    "led_infrared"
     "lektrico"
     "letpot"
     "lg_infrared"
@@ -8324,8 +8523,11 @@
     "light"
     "linkplay"
     "litejet"
+    "litellm"
     "litterrobot"
     "livisi"
+    "llama_cpp"
+    "llm"
     "local_calendar"
     "local_file"
     "local_ip"
@@ -8340,6 +8542,7 @@
     "lookin"
     "loqed"
     "lovelace"
+    "luci"
     "luftdaten"
     "lunatone"
     "lupusec"
@@ -8379,6 +8582,7 @@
     "mfi"
     "microbees"
     "microsoft"
+    "midea"
     "miele"
     "mikrotik"
     "mill"
@@ -8849,6 +9053,7 @@
     "verisure"
     "version"
     "vesync"
+    "vibration"
     "vicare"
     "victron_ble"
     "victron_gx"
@@ -8856,14 +9061,12 @@
     "vilfo"
     "vistapool"
     "vivotek"
-    "vizio"
     "vlc_telnet"
     "vodafone_station"
     "voicerss"
     "voip"
     "volumio"
     "volvo"
-    "volvooncall"
     "wake_on_lan"
     "wake_word"
     "wallbox"
@@ -8893,6 +9096,7 @@
     "wiim"
     "wilight"
     "window"
+    "wirelesstag"
     "withings"
     "wiz"
     "wled"
