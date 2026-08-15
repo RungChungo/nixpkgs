@@ -105,6 +105,9 @@
   "cuda-writing-tests": [
     "index.html#cuda-writing-tests"
   ],
+  "dev-environments": [
+    "index.html#dev-environments"
+  ],
   "ex-build-helpers-extendMkDerivation": [
     "index.html#ex-build-helpers-extendMkDerivation"
   ],
@@ -148,6 +151,9 @@
   ],
   "friction-graphics-wayland": [
     "index.html#friction-graphics-wayland"
+  ],
+  "getting-started": [
+    "index.html#getting-started"
   ],
   "ghc-deprecation-policy": [
     "index.html#ghc-deprecation-policy"
@@ -439,6 +445,9 @@
   ],
   "sec-darwin-availability-checks": [
     "index.html#sec-darwin-availability-checks"
+  ],
+  "sec-darwin-builder-vz": [
+    "index.html#sec-darwin-builder-vz"
   ],
   "sec-darwin-libcxx-deployment-targets": [
     "index.html#sec-darwin-libcxx-deployment-targets"
@@ -2061,6 +2070,12 @@
   ],
   "fetchfromgithub": [
     "index.html#fetchfromgithub"
+  ],
+  "fetchfromhuggingface": [
+    "index.html#fetchfromhuggingface"
+  ],
+  "ex-fetchfromhuggingface": [
+    "index.html#ex-fetchfromhuggingface"
   ],
   "fetchfromgitlab": [
     "index.html#fetchfromgitlab"

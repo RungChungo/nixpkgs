@@ -22,7 +22,7 @@ let
       hash = "sha256-QYBh9ZvmJse3ZimvpU+9ky6ml0pCSZ3mVrYtWtMQGA0=";
     };
 
-    appimageContents = appimageTools.extractType2 { inherit pname version src; };
+    appimageContents = appimageTools.extract { inherit pname version src; };
 
     extraPkgs = pkgs: [ libxshmfence ];
 
@@ -72,7 +72,7 @@ let
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     maintainers = with lib.maintainers; [
       piotrkwiecinski
-      poopsicles
+      dibenzepin
     ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

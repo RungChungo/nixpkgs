@@ -35,11 +35,12 @@
   systemd,
   libGL,
   krb5,
+  unixodbc,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "beekeeper-studio";
-  version = "5.8.1";
+  version = "6.0.0";
 
   src =
     let
@@ -53,9 +54,9 @@ stdenv.mkDerivation (finalAttrs: {
     fetchurl {
       url = "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v${finalAttrs.version}/${asset}";
       hash = selectSystem {
-        x86_64-linux = "sha256-e5y7uBzdbDSUQKpxRjho+2kU3wx23spdSv1PwmJ30gA=";
-        aarch64-linux = "sha256-iuZDeSYljiSRUqtLIA1BcrRaYoqg9dnlbRDLsetVkMQ=";
-        aarch64-darwin = "sha256-Jnm4Vfm9+6dXmjnI5gYpYW1g7Anl9xhIKXbQA2SGUDE=";
+        x86_64-linux = "sha256-mTS5elz54AbbYF6AtPaeZvbR7ysB6a6iu+lbaTrwv5k=";
+        aarch64-linux = "sha256-KSz60oSR5UcVM5p8swRqBCZknGob7/MEMtAI2UmN2Q0=";
+        aarch64-darwin = "sha256-71xe4uWRb83WgvZvwqv52tubZ+8CKKuU1/zQnV0aSGw=";
       };
     };
 
@@ -96,6 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
     libgbm
     vulkan-loader
     krb5
+    unixodbc
   ];
 
   runtimeDependencies = lib.optionals stdenv.hostPlatform.isLinux (lib.getLib systemd);
